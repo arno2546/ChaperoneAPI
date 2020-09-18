@@ -69,3 +69,7 @@ C:\Users\arno\source\repos\Chaperone_API\obj\Debug\Chaperone_API.csproj.CoreComp
 C:\Users\arno\source\repos\Chaperone_API\obj\Debug\Chaperone_API.csproj.CopyComplete
 C:\Users\arno\source\repos\Chaperone_API\obj\Debug\Chaperone_API.dll
 C:\Users\arno\source\repos\Chaperone_API\obj\Debug\Chaperone_API.pdb
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\obj\Debug\Chaperone_API.csprojAssemblyReference.cache
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\obj\Debug\Chaperone_API.csproj.CoreCompileInputs.cache
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\obj\Debug\Chaperone_API.dll
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\obj\Debug\Chaperone_API.pdb

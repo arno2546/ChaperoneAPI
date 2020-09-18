@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Chaperone_API.Repository
 {
-    public class ReviewRepository:Repository<Request>,IReviewRepository
+    public class ReviewRepository:Repository<Review>,IReviewRepository
     {
 
     }
