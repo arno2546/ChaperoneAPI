@@ -9,7 +9,7 @@ namespace Chaperone_API.Models
     public class Message
     {
         [Key]
-        public int CommentId { get; set; }
+        public int MessageId { get; set; }
         public string From { get; set; }
         public string To { get; set; }
         public string MessageString { get; set; }
