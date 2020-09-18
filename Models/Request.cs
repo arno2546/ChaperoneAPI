@@ -19,6 +19,7 @@ namespace Chaperone_API.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string RequestState { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
         public IEnumerable<User> Users { get; set; }
     }
 }

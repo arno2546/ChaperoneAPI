@@ -12,6 +12,7 @@ namespace Chaperone_API.Models
         public int VisitId { get; set; }
         public int TouristId { get; set; }
         public int Location { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
         public User User { get; set; }
     }
 }

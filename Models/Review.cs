@@ -16,6 +16,7 @@ namespace Chaperone_API.Models
         public int ReviewerId { get; set; }
         public int ReviewedId { get; set; }
         public int Rating { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
         public IEnumerable<User> Users { get; set; }
     }
 }

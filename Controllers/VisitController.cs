@@ -24,6 +24,14 @@ namespace Chaperone_API.Controllers
         public IHttpActionResult Get(int id)
         {
             Visit r = visitRepo.GetById(id);
+            if (r == null)
+            {
+                return StatusCode(HttpStatusCode.NoContent);
+            }
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/users/" + r.VisitId, HttpMethod = "GET", Relation = "Self" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/users", HttpMethod = "Post", Relation = "Create a new Visit" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/users/" + r.VisitId, HttpMethod = "PUT", Relation = "Edit self" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/users/" + r.VisitId, HttpMethod = "DELETE", Relation = "DELETE self" });
             return Ok(r);
         }
 

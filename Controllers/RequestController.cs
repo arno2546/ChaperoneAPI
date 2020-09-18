@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace Chaperone_API.Controllers
 {
-    [RoutePrefix("api/request")]
+    [RoutePrefix("api/requests")]
     public class RequestController : ApiController
     {
         RequestRepository reqRepo = new RequestRepository();
@@ -27,6 +27,10 @@ namespace Chaperone_API.Controllers
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/requests/" + u.RequestId, HttpMethod = "GET", Relation = "Self" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/requests", HttpMethod = "Post", Relation = "Create a new  Request" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/requests/" + u.RequestId, HttpMethod = "PUT", Relation = "Edit self" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/requests/" + u.RequestId, HttpMethod = "DELETE", Relation = "DELETE self" });
             return Ok(u);
         }
 

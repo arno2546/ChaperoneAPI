@@ -101,6 +101,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChaperoneDataContext.cs" />
+    <Compile Include="Models\HyperLink.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Review.cs" />

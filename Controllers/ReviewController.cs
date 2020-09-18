@@ -24,6 +24,14 @@ namespace Chaperone_API.Controllers
         public IHttpActionResult Get(int id)
         {
             Review r = revwRepo.GetById(id);
+            if (r == null)
+            {
+                return StatusCode(HttpStatusCode.NoContent);
+            }
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + r.ReviewId, HttpMethod = "GET", Relation = "Self" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews", HttpMethod = "Post", Relation = "Create a new  Review" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + r.ReviewId, HttpMethod = "PUT", Relation = "Edit self" });
+            r.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + r.ReviewId, HttpMethod = "DELETE", Relation = "DELETE self" });
             return Ok(r);
         }
 

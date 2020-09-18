@@ -27,6 +27,10 @@ namespace Chaperone_API.Controllers
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + u.MessageId, HttpMethod = "GET", Relation = "Self" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews", HttpMethod = "Post", Relation = "Create a new  Message" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + u.MessageId, HttpMethod = "PUT", Relation = "Edit self" });
+            u.HyperLinks.Add(new HyperLink() { HRef = "https://localhost:44310/api/reviews/" + u.MessageId, HttpMethod = "DELETE", Relation = "DELETE self" });
             return Ok(u);
         }
 

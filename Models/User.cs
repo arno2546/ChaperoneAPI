@@ -63,6 +63,7 @@ namespace Chaperone_API.Models
         [Display(Name = "Festival")]
         public bool Festival { get; set; }
         public int Rate { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
         public IEnumerable<Request> Requests { get; set; }
         public IEnumerable<Visit> Visits { get; set; }
         public IEnumerable<Review> Reviews { get; set; }
