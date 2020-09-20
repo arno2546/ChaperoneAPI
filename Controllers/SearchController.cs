@@ -13,7 +13,7 @@ namespace Chaperone_API.Controllers
     public class SearchController : ApiController
     {
         [Route("")]
-        public IHttpActionResult Get(Search s)
+        public IHttpActionResult Post(Search s)
         {
             UserRepository userRepo = new UserRepository();
             List<User> FilterdUsers = userRepo.GetAll().Where(x => x.Location.ToString().Contains(s.SearchString.ToString()) && x.UserType == "Guide").ToList();

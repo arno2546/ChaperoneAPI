@@ -140,3 +140,6 @@ C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\System.Web.Http.xml
 C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\System.Web.Http.WebHost.xml
 C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\arno\Documents\GitHub\ChaperoneAPI\obj\Debug\Chaperone_API.csproj.CopyComplete
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\System.Web.Cors.dll
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\System.Web.Http.Cors.dll
+C:\Users\arno\Documents\GitHub\ChaperoneAPI\bin\System.Web.Http.Cors.xml
