@@ -22,6 +22,9 @@ namespace Chaperone_API.Controllers
             {
                 valUser.UserType = u.UserType;
                 valUser.Email = u.Email;
+                valUser.Contact = u.Contact;
+                valUser.UserName = u.Name;
+                valUser.Id = u.UserId;
                 return Ok(valUser);
             }
             return StatusCode(HttpStatusCode.NotFound);
