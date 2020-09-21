@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\RequestController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
@@ -109,6 +110,7 @@
     </Compile>
     <Compile Include="Models\ChaperoneDataContext.cs" />
     <Compile Include="Models\HyperLink.cs" />
+    <Compile Include="Models\LogIn.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Review.cs" />
