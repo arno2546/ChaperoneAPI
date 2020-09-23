@@ -56,5 +56,13 @@ namespace Chaperone_API.Controllers
             userRepo.Edit(u);
             return Ok(u);
         }
+        [Route("{id}/requests")]
+        public IHttpActionResult GetRequests(int id)
+        {
+            RequestRepository reqRepo = new RequestRepository();
+            List<Request> requests = new List<Request>();
+            requests = reqRepo.GetAll().Where(x => x.GuideId == id || x.TouristId == id).ToList();
+            return Ok(requests);
+        }
     }
 }
