@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\BasicAuthorizationAttribute.cs" />
     <Compile Include="Controllers\GenderRatioController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
