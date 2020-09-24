@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Chaperone_API.Models;
+using Chaperone_API.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -23,7 +25,9 @@ namespace Chaperone_API.Attributes
                 string[] splittedData = decoded.Split(new char[]{':'});
                 string username = splittedData[0];
                 string password = splittedData[1];
-                if(username=="admin" && password=="123")
+                UserRepository userRepo = new UserRepository();
+                User u = userRepo.GetAll().Where(x => x.Email == username && x.Password == password).FirstOrDefault();
+                if(u!=null)
                 {
                     Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username),null);
                 }
