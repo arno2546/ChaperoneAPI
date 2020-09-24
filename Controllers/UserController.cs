@@ -38,6 +38,7 @@ namespace Chaperone_API.Controllers
         }
 
         [Route("{id}")]
+        [BasicAuthorization]
         public IHttpActionResult Delete(int id)
         {
             userRepo.Delete(id);
@@ -53,6 +54,7 @@ namespace Chaperone_API.Controllers
         }
 
         [Route("{id}")]
+        [BasicAuthorization]
         public IHttpActionResult Put([FromBody]User u,[FromUri]int id)
         {
             u.UserId = id;
@@ -60,6 +62,7 @@ namespace Chaperone_API.Controllers
             return Ok(u);
         }
         [Route("{id}/requests")]
+        [BasicAuthorization]
         public IHttpActionResult GetRequests(int id)
         {
             RequestRepository reqRepo = new RequestRepository();
