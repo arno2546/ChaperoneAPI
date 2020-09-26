@@ -1,4 +1,5 @@
-﻿using Chaperone_API.Models;
+﻿using Chaperone_API.Attributes;
+using Chaperone_API.Models;
 using Chaperone_API.Repository;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,13 @@ namespace Chaperone_API.Controllers
         UserRepository userRepo = new UserRepository();
 
         [Route("")]
+        [BasicAuthorization]
         public IHttpActionResult Get()
         {
             return Ok(userRepo.GetAll());
         }
         [Route("{id}", Name ="GetUserById")]
+        [BasicAuthorization]
         public IHttpActionResult Get(int id)
         {
             User u = userRepo.GetById(id);
@@ -35,6 +38,7 @@ namespace Chaperone_API.Controllers
         }
 
         [Route("{id}")]
+        [BasicAuthorization]
         public IHttpActionResult Delete(int id)
         {
             userRepo.Delete(id);
@@ -50,6 +54,7 @@ namespace Chaperone_API.Controllers
         }
 
         [Route("{id}")]
+        [BasicAuthorization]
         public IHttpActionResult Put([FromBody]User u,[FromUri]int id)
         {
             u.UserId = id;
@@ -57,6 +62,7 @@ namespace Chaperone_API.Controllers
             return Ok(u);
         }
         [Route("{id}/requests")]
+        [BasicAuthorization]
         public IHttpActionResult GetRequests(int id)
         {
             RequestRepository reqRepo = new RequestRepository();
